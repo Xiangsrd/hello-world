@@ -1,0 +1,101 @@
+{
+"latex-workshop.view.pdf.viewer":"tab",
+"latex-workshop.latex.tools":[
+{
+    "name":"xelatex",
+    "command":"xelatex",
+    "args":[
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "%DOCFILE%"//把%DOC%替换%DOCFILE%为就可以支持中文路径下的文件
+    ]
+},
+
+{
+    "name":"latexmk",
+    "command":"latexmk",
+    "args":[
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "%DOCFILE%"//把%DOC%替换%DOCFILE%为就可以支持中文路径下的文件
+    ]
+},
+
+{
+    "name":"pdflatex",
+    "command":"pdflatex",
+    "args":[
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOCFILE%"//把%DOC%替换%DOCFILE%为就可以支持中文路径下的文件
+    ]
+},
+
+{
+    "name":"bibtex",
+    "command":"bibtex",
+    "args": [
+        "%DOCFILE%"
+    ]
+},
+],
+"latex-workshop.latex.clean.fileTypes": [
+    "%DOCFILE%.aux",
+    "%DOCFILE%.bbl",
+    "%DOCFILE%.blg",
+    "%DOCFILE%.idx",
+    "%DOCFILE%.ind",
+    "%DOCFILE%.lof",
+    "%DOCFILE%.lot",
+    "%DOCFILE%.out",
+    "%DOCFILE%.toc",
+    "%DOCFILE%.acn",
+    "%DOCFILE%.acr",
+    "%DOCFILE%.alg",
+    "%DOCFILE%.glg",
+    "%DOCFILE%.glo",
+    "%DOCFILE%.gls",
+    "%DOCFILE%.fls",
+    "%DOCFILE%.log",
+    "%DOCFILE%.fdb_latexmk",
+    "%DOCFILE%.snm",
+    "%DOCFILE%.synctex(busy)",
+    "%DOCFILE%.synctex.gz(busy)",
+    "%DOCFILE%.nav",
+    "%DOCFILE%.vrb"
+],
+
+"latex-workshop.latex.recipes":[
+    {
+        "name":"pdflatex",
+        "tools":["pdflatex"]
+    },
+    {
+        "name":"xelatex",
+        "tools":["xelatex"]
+    },
+    {
+        "name":"pdflatex -> biblatex -> pdflatex*2",
+        "tools":[
+            "pdflatex",
+            "biblatex",
+            "pdflatex",
+            "pdflatex",
+        ]
+    },
+    {
+        "name":"xelatex -> biblatex ->xelatex*2",
+        "tools":[
+            "xelatex",
+            "biblatex",
+            "xelatex",
+            "xelatex",
+        ]
+    }
+]
+}

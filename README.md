@@ -5,7 +5,9 @@
 暑假即将过去，在GitHub上还差一个初始仓库，也就借这次机会整理一下笔记。
 
 ~虽然暂时还不会Git😅~
-现在也开始接触`Git`了。有点麻烦，流泪猫猫头🥲。
+现在也开始接触`Git`了。
+
+~作者现在发现原来大家都知道善用搜索只有自己错过几个亿并深度自闭~流泪猫猫头🥲。
 ## contents
 `markdown`基础语法简单，也只有很简单的[笔记](https://github.com/Xiangsrd/hello-world/tree/main/markdown_test)。至于更复杂的用法，秉持边用边学的原则。
 
